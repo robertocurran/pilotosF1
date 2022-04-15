@@ -105,7 +105,7 @@ header .menu-links li {
         grid-gap: 1.5rem;
         max-width: 100%;
         font-size: 1rem;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
     }
     header img {
         width: 200px;
@@ -570,56 +570,43 @@ cite::after {
     }
 }
 
-.bio {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    display: grid;
-
-    grid-template-columns: 1fr 1.3fr 1.7fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        ". spaceA spaceB ."
-        "spaceC spaceC spaceC spaceC";
-
-    grid-gap: 1.5rem;
-    max-width: 100%;
-    font-size: 1rem;
-    margin-bottom: 5rem;
-}
-
-@media screen and (orientation: portrait) {
+@media screen and (orientation: landscape) {
     .bio {
         margin-top: 5%;
         margin-bottom: 5%;
         display: grid;
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1.3fr 1.7fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". spaceA spaceB ."
+            "spaceC spaceC spaceC spaceC";
+
         grid-gap: 1.5rem;
         max-width: 100%;
         font-size: 1rem;
         margin-bottom: 5rem;
     }
-}
 
-.bio-cara img {
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 10px;
-}
+    .bio-cara img {
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 10px;
+    }
 
-.bio-datos {
-    grid-area: spaceB;
-    position: relative;
+    .bio-datos {
+        grid-area: spaceB;
+        position: relative;
+    }
+    .bio-datos ul {
+        position: absolute;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
 }
-.bio-datos ul {
-    position: absolute;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
 .bio-datos li {
     list-style: none;
     font-size: 25px;
@@ -637,6 +624,35 @@ cite::after {
 
 .bio-texto p {
     margin-bottom: 2em;
+}
+
+@media screen and (orientation: portrait) {
+    .bio {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: block;
+    }
+    .bio-cara {
+        padding: 3%;
+        display: block;
+    }
+    .bio div {
+        margin-bottom: 5vh;
+    }
+    .bio-datos li {
+        list-style: none;
+        font-size: 20px;
+    }
+    .bio-cara img {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+    }
+
+    .bio-texto {
+        font-size: 20px;
+    }
 }
 
 .container-cars {
