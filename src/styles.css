@@ -1,0 +1,701 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    --color_principal: #e70000;
+    --color_transparente: rgba(0, 0, 0, 0.5);
+    --color_texto: #1f1f1f;
+
+    --color-alpine: rgb(4, 118, 211);
+    --color-mclaren: rgb(245, 112, 23);
+    --color-mercedes: rgb(37, 223, 176);
+    --color-ferrari: rgb(187, 14, 23);
+    --color-redbull: rgb(15, 14, 112);
+    font-family: Roboto;
+}
+
+/* Reset de margins y paddings */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Márgenes principales */
+.container {
+    margin-right: 15%;
+    margin-left: 15%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media screen and (orientation: portrait) {
+    .container {
+        margin-right: 3%;
+        margin-left: 3%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+/* Cabecera*/
+
+.header-container a:hover {
+    text-decoration: none;
+}
+h1 {
+    color: var(--color_principal);
+    font-family: Orbitron;
+    font-size: 60px;
+    font-stretch: ultra-expanded;
+    margin-bottom: 0em;
+    padding-top: 0.5em;
+}
+
+h2 {
+    font-family: Orbitron;
+    margin-top: 0em;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-transform: uppercase;
+    background-color: white;
+    padding-bottom: 0px;
+}
+
+header nav {
+    background-color: var(--color_principal);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+header .menu-links a {
+    color: white;
+    font-weight: 800;
+}
+
+header .menu-links a:hover {
+    color: var(--color_transparente);
+}
+
+header .menu-links .active {
+    color: var(--primary-color);
+}
+
+header .menu-links li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (orientation: portrait) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-bottom: 5rem;
+    }
+    header img {
+        width: 200px;
+    }
+
+    h1 {
+        color: var(--color_principal);
+        font-family: Orbitron;
+        font-size: 20px;
+        font-stretch: ultra-expanded;
+        margin-bottom: 0em;
+        padding-top: 0.5em;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-family: Orbitron;
+        margin-top: 0em;
+    }
+    header .menu-links li {
+        display: block;
+        margin-right: 0px;
+        font-size: 15px;
+    }
+    .header-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.header-container img {
+    height: max-content;
+    padding-top: 1%;
+}
+
+/* Cuerpo de la web */
+
+body {
+    height: 100vh;
+    font-size: 20px;
+    color: var(--color_texto);
+    background: rgb(240, 240, 240);
+}
+
+body a {
+    color: var(--color_principal);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
+#portada-seccion-1 {
+    color: black;
+    font-family: Orbitron;
+    font-size: 40px;
+    font-style: italic;
+    font-stretch: ultra-expanded;
+    margin-bottom: 0em;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+
+main h3 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 2%;
+}
+
+#portada-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 5rem;
+}
+
+@media screen and (orientation: portrait) {
+    #portada-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.portada-enlaces-container {
+    display: grid;
+}
+.portada-enlaces-container .cuadro-enlace-texto {
+    background-color: var(--color_texto);
+    color: white;
+    padding: 3%;
+}
+
+.portada-enlaces-container .cuadro-enlace-texto a {
+    color: white;
+}
+
+.portada-enlaces-container:hover .cuadro-enlace-texto {
+    background-color: var(--color_principal);
+}
+
+.portada-enlaces-container .cuadro-enlace {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.portada-enlaces-container .cuadro-enlace img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.portada-enlaces-container:hover .cuadro-enlace img {
+    transform: scale(1.3);
+    filter: brightness(60%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#presentacion-img {
+    position: relative;
+
+    font-size: 50px;
+    font-weight: 700;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../src/img/Massa_Ferrari_Pitstop_Chinese_GP_2008.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+
+    margin-bottom: 5%;
+}
+@media screen and (orientation: portrait) {
+    #presentacion-img {
+        font-size: 1.8em;
+    }
+}
+#presentacion-img > * {
+    position: absolute;
+    top: 30%;
+    color: white;
+    text-align: center;
+}
+
+quote {
+    quotes: "«" "»";
+}
+quote::before {
+    content: open-quote;
+}
+quote::after {
+    content: close-quote;
+}
+
+cite {
+    quotes: "-" ".";
+}
+cite::before {
+    content: open-quote;
+}
+cite::after {
+    content: close-quote;
+}
+
+.tres-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
+
+@media screen and (orientation: portrait) {
+    .tres-imagenes {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-bottom: 5em;
+        margin-top: 5em;
+    }
+}
+
+.tres-imagenes img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-presentacion {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (orientation: portrait) {
+    .video-presentacion {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.video-presentacion iframe {
+    width: 100%;
+}
+
+.video-presentacion figcaption {
+    font-size: smaller;
+    text-align: center;
+}
+
+.quotemichael {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+@media screen and (orientation: portrait) {
+    .quotemichael {
+        margin-left: 1%;
+        margin-right: 1%;
+        padding-top: 2%;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-bottom: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border-radius: 5px;
+        background-color: lightgray;
+    }
+}
+
+#pilot-faces {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
+@media screen and (orientation: portrait) {
+    #pilot-faces {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-bottom: 5em;
+        margin-top: 5em;
+    }
+}
+#pilot-faces figcaption {
+    padding-left: 10%;
+}
+#pilot-faces img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+.carapiloto a {
+    color: var(--color_texto);
+    text-decoration: none;
+}
+
+.carapiloto:hover a {
+    color: var(--color_principal);
+    text-decoration: none;
+}
+.carapiloto:hover img {
+    border-style: solid;
+    border-width: 7px;
+    border-color: var(--color_principal);
+}
+
+@media screen and (orientation: portrait) {
+    .carapiloto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#cars-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 20vh;
+    margin-top: 10vh;
+
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+    #cars-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-bottom: 2em;
+        margin-top: 2em;
+
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+#cars-container div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cargando-circuito {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    font-size: 50px;
+    text-align: center;
+}
+
+#cargando-circuito img {
+    height: 200px;
+
+    -webkit-transition-property: -webkit-transform;
+    transition-duration: 0.5s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 0.5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    transition-property: transform;
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#carreras {
+    border-style: solid;
+    border-width: 7px;
+    border-color: var(--color_principal);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5%;
+
+    display: none;
+    grid-template-columns: 0.5fr 1.2fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    max-width: 100%;
+    margin-bottom: 5rem;
+
+    font-size: 20px;
+}
+
+#carreras .header-carreras {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#carreras .num-carrera {
+    font-family: Orbitron;
+    font-size: 30px;
+    color: var(--color_principal);
+    text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+    #carreras {
+        border-style: solid;
+        border-width: 3px;
+        border-color: var(--color_principal);
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 5%;
+
+        display: none;
+        grid-template-columns: 0.5fr 1.2fr 1fr 1fr;
+        grid-gap: 0.5rem;
+        max-width: 100%;
+        margin-bottom: 5rem;
+
+        font-size: 10px;
+    }
+
+    #carreras .header-carreras {
+        color: black;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    #carreras .num-carrera {
+        font-family: Orbitron;
+        font-size: 12px;
+        color: var(--color_principal);
+        text-align: center;
+    }
+}
+
+.bio {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr 1.7fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". spaceA spaceB ."
+        "spaceC spaceC spaceC spaceC";
+
+    grid-gap: 1.5rem;
+    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 5rem;
+}
+
+@media screen and (orientation: portrait) {
+    .bio {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        max-width: 100%;
+        font-size: 1rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.bio-cara img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+.bio-datos {
+    grid-area: spaceB;
+    position: relative;
+}
+.bio-datos ul {
+    position: absolute;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.bio-datos li {
+    list-style: none;
+    font-size: 25px;
+}
+
+.bio-cara {
+    grid-area: spaceA;
+    padding: 3%;
+}
+
+.bio-texto {
+    grid-area: spaceC;
+    font-size: 20px;
+}
+
+.bio-texto p {
+    margin-bottom: 2em;
+}
+
+.container-cars {
+    margin-top: 3%;
+    margin-bottom: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container-cars iframe {
+    width: 100%;
+    min-height: 600;
+}
+
+.recursos {
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    font-size: 20px;
+}
+.recursos h3 {
+    font-size: 130%;
+    margin-bottom: 2em;
+}
+.recursos p {
+    margin-bottom: 2em;
+}
+
+/* Pie de página */
+
+footer {
+    background: black;
+    color: white;
+    padding-top: 3rem;
+    margin-top: auto;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+/* Decoración global */
+
+.alpine {
+    color: var(--color-alpine);
+}
+
+.mclaren {
+    color: var(--color-mclaren);
+}
+
+.mercedes {
+    color: var(--color-mercedes);
+}
+
+.ferrari {
+    color: var(--color-ferrari);
+}
+
+.redbull {
+    color: var(--color-redbull);
+}
