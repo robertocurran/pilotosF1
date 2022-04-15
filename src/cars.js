@@ -13,7 +13,7 @@ function getLivery(team) {
         case "mercedes":
             return `grayscale(100%) brightness(1.5)`;
         case "redbull":
-            return `hue-rotate(${String(240)}deg)`;
+            return `hue-rotate(${String(240)}deg)  brightness(0.3)`;
         case "ferrari":
             return "saturate(80%);";
         case "mclaren":
