@@ -459,7 +459,7 @@ cite::after {
         margin-top: 5em;
     }
 }
-#pilot-faces figcaption {
+#pilot-faces div {
     padding-left: 10%;
 }
 #pilot-faces img {
