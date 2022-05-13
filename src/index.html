@@ -4,9 +4,13 @@
         <meta charset="UTF-8" />
         <title>PilotosF1</title>
         <meta name="language" content="Spanish" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏎️</text></svg>"
+        />
         <meta
             name="description"
-            content="Página principal del PEC 1 de Herramientas HTML y CSS"
+            content="Página principal del PEC 2 de Herramientas HTML y CSS"
         />
         <meta name="keywords" content="HTML" />
         <meta name="author" content="Roberto Curran García" />
@@ -15,6 +19,7 @@
             content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="styles.css" />
+
         <script src="car_color.js"></script>
     </head>
     <body>
@@ -26,7 +31,10 @@
                         <h2>Temporada 2022</h2>
                     </div>
                     <a href="index.html"
-                        ><img alt="Logo PilotosF1" src="img/logo.png" id="logo"
+                        ><img
+                            alt="Logo PilotosF1"
+                            src="img/logo.webp"
+                            id="logo"
                     /></a>
                 </div>
             </div>
@@ -49,6 +57,21 @@
             <section id="portada-seccion-1">
                 <div class="container">
                     <p>Tu portal web fan de los actuales pilotos de f1</p>
+
+                    <picture>
+                        <source
+                            media="(max-width: 600px)"
+                            srcset="img/F1-22-Miami-captura-mini.webp"
+                        />
+                        <source
+                            media="(min-width: 601px)"
+                            srcset="img/F1-22-Miami-captura.webp"
+                        />
+                        <img
+                            alt="Imagen principal F1"
+                            src="img/F1-22-Miami-captura.webp"
+                        />
+                    </picture>
                 </div>
             </section>
 
@@ -59,10 +82,24 @@
                     <div class="portada-enlaces-container">
                         <div class="cuadro-enlace">
                             <a href="presentacion.html">
-                                <img
-                                    alt="Felipe Massa haciendo pitstop"
-                                    src="img/Massa_Ferrari_Pitstop_Chinese_GP_2008.jpg"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 600px)"
+                                        srcset="
+                                            img/Massa_Ferrari_Pitstop_Chinese_GP_2008_close.webp
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width: 601px)"
+                                        srcset="
+                                            img/Massa_Ferrari_Pitstop_Chinese_GP_2008.webp
+                                        "
+                                    />
+                                    <img
+                                        alt="Felipe Massa haciendo pitstop"
+                                        src="img/Massa_Ferrari_Pitstop_Chinese_GP_2008.webp"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="cuadro-enlace-texto">
@@ -75,10 +112,20 @@
                     <div class="portada-enlaces-container">
                         <div class="cuadro-enlace">
                             <a href="pilotos.html">
-                                <img
-                                    alt="Desfile de conductores del GP de Estados Unidos"
-                                    src="img/driver_parade.jpg"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 1023px)"
+                                        srcset="img/driver_parade_close.webp"
+                                    />
+                                    <source
+                                        media="(min-width: 1024px)"
+                                        srcset="img/driver_parade.webp"
+                                    />
+                                    <img
+                                        alt="Desfile de conductores del GP de Estados Unidos"
+                                        src="img/driver_parade.jpg"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="cuadro-enlace-texto">
@@ -92,10 +139,24 @@
                     <div class="portada-enlaces-container">
                         <div class="cuadro-enlace">
                             <a href="coches.html">
-                                <img
-                                    alt="Ferrari F1-75"
-                                    src="img/Ferrari_F1-75_in_Melbourne.jpg"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 600px)"
+                                        srcset="
+                                            img/Ferrari_F1-75_in_Melbourne-mini.webp
+                                        "
+                                    />
+                                    <source
+                                        media="(min-width: 601px)"
+                                        srcset="
+                                            img/Ferrari_F1-75_in_Melbourne.webp
+                                        "
+                                    />
+                                    <img
+                                        alt="Ferrari F1-75"
+                                        src="img/Ferrari_F1-75_in_Melbourne.webp"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="cuadro-enlace-texto">
@@ -108,12 +169,26 @@
 
                     <div class="portada-enlaces-container">
                         <div class="cuadro-enlace">
-                            <a href="historia.html">
+                            <a href="historia.html"> </a>
+
+                            <picture>
+                                <source
+                                    media="(max-width: 600px)"
+                                    srcset="
+                                        img/Fangio_chases_Collins_Nurburgring_1957-mini.webp
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 601px)"
+                                    srcset="
+                                        img/Fangio_chases_Collins_Nurburgring_1957.webp
+                                    "
+                                />
                                 <img
                                     alt="Fangio persigue a Collins en Nurburgring 1957"
-                                    src="img/Fangio_chases_Collins_Nurburgring_1957.jpg"
+                                    src="img/Fangio_chases_Collins_Nurburgring_1957.webp"
                                 />
-                            </a>
+                            </picture>
                         </div>
                         <div class="cuadro-enlace-texto">
                             <a class="portada-enlace" href="historia.html">
@@ -125,10 +200,20 @@
                     <div class="portada-enlaces-container">
                         <div class="cuadro-enlace">
                             <a href="calendario.html">
-                                <img
-                                    alt="Esquema del circuito de Barcelona"
-                                    src="img/Autodromo_Nazionale_di_Monza,_Italy_(Ank_Kumar)_06.jpg"
-                                />
+                                <picture>
+                                    <source
+                                        media="(max-width: 600px)"
+                                        srcset="img/monza-mini.webp"
+                                    />
+                                    <source
+                                        media="(min-width: 601px)"
+                                        srcset="img/monza.webp"
+                                    />
+                                    <img
+                                        alt="Fotografía del circuito de monza 2006"
+                                        src="img/monza.webp"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="cuadro-enlace-texto">
@@ -145,6 +230,21 @@
                                     alt="Libros amontonados un una libreca con un bolígrafo."
                                     src="img/books.jpg"
                                 />
+
+                                <picture>
+                                    <source
+                                        media="(max-width: 600px)"
+                                        srcset="img/books-mini.webp"
+                                    />
+                                    <source
+                                        media="(min-width: 601px)"
+                                        srcset="img/books.webp"
+                                    />
+                                    <img
+                                        alt="Libros amontonados un una libreca con un bolígrafo."
+                                        src="img/books.webp"
+                                    />
+                                </picture>
                             </a>
                         </div>
                         <div class="cuadro-enlace-texto">
@@ -159,12 +259,20 @@
 
         <footer>
             <div class="container">
+                <ul class="footer-links">
+                    <li><a href="index.html">Portada</a></li>
+                    <li><a href="presentacion.html">Presentación</a></li>
+                    <li><a href="pilotos.html">Biografías</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="coches.html">Coches</a></li>
+                    <li><a href="enlaces.html">Enlaces</a></li>
+                </ul>
                 <p>
                     Página web realizada por <b>Roberto Curran García</b>, para
                     la asignatura Herramientas HTML y CSS. Segundo semestre del
                     curso 2021-2022
                 </p>
-                <p>🏎️</p>
+                <img src="img/Gerald_G_Formula_One_Car.svg" />
             </div>
         </footer>
     </body>

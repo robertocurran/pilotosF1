@@ -13,6 +13,7 @@
     --color-ferrari: rgb(187, 14, 23);
     --color-redbull: rgb(15, 14, 112);
     font-family: Roboto;
+    overflow-x: hidden;
 }
 
 /* Reset de margins y paddings */
@@ -82,6 +83,7 @@ header .menu-links a {
 
 header .menu-links a:hover {
     color: var(--color_transparente);
+    text-decoration: none;
 }
 
 header .menu-links .active {
@@ -169,6 +171,44 @@ body a:hover {
     margin-bottom: 0em;
     margin-top: 2%;
     padding-bottom: 2%;
+    text-align: center;
+}
+
+#portada-seccion-1 img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 60%;
+    max-height: 10em;
+
+    clip-path: polygon(
+        0% 0%,
+        14.25% 0%,
+        43.25% 0%,
+        100% 0%,
+        100% 90.75%,
+        100% 100%,
+        92.53% 100%,
+        92.53% 80.21%,
+        78.36% 80.21%,
+        78.36% 17.76%,
+        58.3% 17.76%,
+        57.03% 17.76%,
+        52.05% 23.04%,
+        45.56% 27.97%,
+        39.26% 31.5%,
+        32.88% 34.38%,
+        32.88% 51.45%,
+        50.34% 51.45%,
+        50.34% 80.21%,
+        33.1% 80.21%,
+        33.1% 100%,
+        0% 100%
+    );
+
+    filter: contrast(200%);
+    filter: saturate(100%);
+    filter: sepia(70%);
 }
 
 main h3 {
@@ -187,6 +227,9 @@ main h3 {
 }
 
 @media screen and (orientation: portrait) {
+    #portada-seccion-1 img {
+        width: 100%;
+    }
     #portada-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -238,6 +281,27 @@ main h3 {
     transition: all 0.3s ease;
 }
 
+#coche_animado {
+    position: absolute;
+    left: -10%;
+    top: 70%;
+    transform: scaleX(-1);
+
+    animation-name: carrera;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes carrera {
+    0% {
+        left: -10%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
 #presentacion-img {
     position: relative;
 
@@ -248,7 +312,7 @@ main h3 {
     padding-bottom: 4rem;
 
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(../src/img/Massa_Ferrari_Pitstop_Chinese_GP_2008.jpg);
+        url(../src/img/Massa_Ferrari_Pitstop_Chinese_GP_2008.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -256,9 +320,16 @@ main h3 {
 
     margin-bottom: 5%;
 }
+
 @media screen and (orientation: portrait) {
     #presentacion-img {
         font-size: 1.8em;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(../src/img/Massa_Ferrari_Pitstop_Chinese_GP_2008_mini.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 400px;
     }
 }
 #presentacion-img > * {
@@ -347,7 +418,7 @@ cite::after {
     margin-right: 30%;
     padding: 2%;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 5em;
     border-radius: 5px;
     background-color: lightgray;
 }
@@ -360,13 +431,14 @@ cite::after {
         padding-left: 10%;
         padding-bottom: 2%;
         margin-top: 2%;
-        margin-bottom: 2%;
+        margin-bottom: 5em;
         border-radius: 5px;
         background-color: lightgray;
     }
 }
 
 #pilot-faces {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1.5rem;
@@ -392,7 +464,11 @@ cite::after {
 #pilot-faces img {
     max-width: 200px;
     max-height: 200px;
-    border-radius: 50%;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.carapiloto {
 }
 
 .carapiloto a {
@@ -404,10 +480,38 @@ cite::after {
     color: var(--color_principal);
     text-decoration: none;
 }
+.carapiloto img {
+    transition: all 0.2s ease-in-out;
+}
 .carapiloto:hover img {
     border-style: solid;
     border-width: 7px;
     border-color: var(--color_principal);
+    animation: jiggle 0.5s infinite ease, circleimage 0.1s 1 ease-in;
+}
+
+@keyframes circleimage {
+    0% {
+        border-radius: 3%;
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(0deg);
+        border-radius: 50%;
+    }
+    50% {
+        transform: rotate(2deg);
+        border-radius: 50%;
+    }
+    100% {
+        transform: rotate(-2deg);
+        border-radius: 50%;
+    }
 }
 
 @media screen and (orientation: portrait) {
@@ -450,6 +554,58 @@ cite::after {
 #cars-container div {
     margin-left: auto;
     margin-right: auto;
+    transition: all 0.2s ease-out;
+}
+
+#cars-container div:hover {
+    border-style: solid;
+    border-radius: 10%;
+    border-width: 7px;
+    border-color: var(--color_principal);
+}
+
+#cars-container div:hover .cars {
+    animation: carrun 10s infinite ease;
+}
+
+#cars-container a:hover {
+    text-decoration: none;
+}
+
+@keyframes carrun {
+    0% {
+        transform: translate(10px, 5px);
+    }
+    10% {
+        transform: translate(-10px, -5px);
+    }
+    20% {
+        transform: translate(-30px, 00px);
+    }
+    30% {
+        transform: translate(30px, 5px);
+    }
+    40% {
+        transform: translate(10px, -5px);
+    }
+    50% {
+        transform: translate(-10px, 5px);
+    }
+    60% {
+        transform: translate(-30px, 5px);
+    }
+    70% {
+        transform: translate(30px, 5px);
+    }
+    80% {
+        transform: translate(-10px, -5px);
+    }
+    90% {
+        transform: translate(10px, 5px);
+    }
+    100% {
+        transform: translate(10px, -5px);
+    }
 }
 
 #cargando-circuito {
@@ -462,41 +618,11 @@ cite::after {
 #cargando-circuito img {
     height: 200px;
 
-    -webkit-transition-property: -webkit-transform;
-    transition-duration: 0.5s;
-    -webkit-animation-name: rotate;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-
-    -moz-transition-property: -moz-transform;
-    -moz-animation-name: rotate;
-    -moz-animation-duration: 0.5s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-
     transition-property: transform;
     animation-name: rotate;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-}
-
-@-webkit-keyframes rotate {
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@-moz-keyframes rotate {
-    from {
-        -moz-transform: rotate(0deg);
-    }
-    to {
-        -moz-transform: rotate(360deg);
-    }
 }
 
 @keyframes rotate {
@@ -609,7 +735,7 @@ cite::after {
 }
 .bio-datos li {
     list-style: none;
-    font-size: 25px;
+    font-size: 1.5vw;
 }
 
 .bio-cara {
@@ -625,7 +751,11 @@ cite::after {
 .bio-texto p {
     margin-bottom: 2em;
 }
-
+.bio-texto img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
 @media screen and (orientation: portrait) {
     .bio {
         margin-top: 5%;
@@ -652,6 +782,39 @@ cite::after {
 
     .bio-texto {
         font-size: 20px;
+    }
+
+    .bio-texto img {
+        max-width: 100%;
+        display: block;
+    }
+}
+
+.campeon {
+    font-size: 40px;
+    color: rgb(240, 198, 13);
+    text-align: center;
+    animation: brillo 1s linear infinite alternate,
+        crecercampeon 2s ease-in-out infinite alternate;
+}
+@keyframes crecercampeon {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+@keyframes brillo {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffbd2f,
+            0 0 40px #ffbd2f, 0 0 50px #ffbd2f, 0 0 60px #ffbd2f,
+            0 0 70px #ffbd2f;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #f8f41e, 0 0 40px #f8f41e,
+            0 0 50px #f8f41e, 0 0 60px #f8f41e, 0 0 70px #f8f41e,
+            0 0 80px #f8f41e;
     }
 }
 
@@ -692,6 +855,32 @@ footer {
     padding-bottom: 2rem;
     position: relative;
     text-align: center;
+}
+
+footer img {
+    padding-top: 5em;
+    padding-bottom: 1em;
+    width: 10em;
+}
+
+footer .footer-links a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-links li {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+footer .footer-links li::after {
+    content: "•";
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+footer .footer-links li:last-child:after {
+    content: "";
 }
 
 /* Decoración global */

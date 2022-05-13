@@ -4,9 +4,13 @@
         <meta charset="UTF-8" />
         <title>PilotosF1</title>
         <meta name="language" content="Spanish" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏎️</text></svg>"
+        />
         <meta
             name="description"
-            content="Página principal del PEC 1 de Herramientas HTML y CSS"
+            content="Página principal del PEC 2 de Herramientas HTML y CSS"
         />
         <meta name="keywords" content="HTML" />
         <meta name="author" content="Roberto Curran García" />
@@ -28,7 +32,7 @@
                     <a href="../index.html"
                         ><img
                             alt="Logo PilotosF1"
-                            src="../img/logo.png"
+                            src="../img/logo.webp"
                             id="logo"
                     /></a>
                 </div>
@@ -75,6 +79,8 @@
                         </ul>
                     </div>
                     <div class="bio-texto">
+                        <p class="campeon">Actual campeón mundial 🏆</p>
+
                         <p>
                             Max Emilian Verstappen (Hasselt, 30 de septiembre de
                             1997) es un piloto de automovilismo neerlandés
@@ -117,13 +123,37 @@
                         </p>
 
                         <p>
-                            Ese año se proclamó campeón de Fórmula 1 tras ganar
-                            en el Gran Premio de Abu Dabi, derrotando al
+                            Ese año (2021) se proclamó campeón de Fórmula 1 tras
+                            ganar en el Gran Premio de Abu Dabi, derrotando al
                             defensor del título Lewis Hamilton, con quien había
                             llegado a la última carrera empatado a puntos. De
                             esta forma, Verstappen también se convirtió en el
                             primer neerlandés en obtener el título.
                         </p>
+                        <picture>
+                            <source
+                                media="(max-width: 600px)"
+                                srcset="../img/wdc_verstappen-mini.webp"
+                            />
+                            <source
+                                media="(min-width: 601px)"
+                                srcset="../img/wdc_verstappen.webp"
+                            />
+                            <img
+                                alt="Max Verstappen levantando el trofeo de Abu Dhabi"
+                                src="../img/wdc_verstappen.webp"
+                            />
+                        </picture>
+
+                        <img
+                            src="../img/stat-verstappen.webp"
+                            srcset="
+                                ../img/stat-verstappen-mini.webp 360w,
+                                ../img/stat-verstappen.webp      600w
+                            "
+                            sizes="(max-width: 600px) 360px,
+                            600px"
+                        />
                     </div>
                 </div>
             </div>
@@ -131,12 +161,22 @@
 
         <footer>
             <div class="container">
+                <ul class="footer-links">
+                    <li>
+                        <a href="../index.html">Portada</a>
+                    </li>
+                    <li><a href="../presentacion.html">Presentación</a></li>
+                    <li><a href="../pilotos.html">Biografías</a></li>
+                    <li><a href="../calendario.html">Calendario</a></li>
+                    <li><a href="../coches.html">Coches</a></li>
+                    <li><a href="../enlaces.html">Enlaces</a></li>
+                </ul>
                 <p>
                     Página web realizada por <b>Roberto Curran García</b>, para
                     la asignatura Herramientas HTML y CSS. Segundo semestre del
                     curso 2021-2022
                 </p>
-                <p>🏎️</p>
+                <img src="../img/Gerald_G_Formula_One_Car.svg" />
             </div>
         </footer>
     </body>
