@@ -330,6 +330,7 @@ main h3 {
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 400px;
+        margin-bottom: 3em;
     }
 }
 #presentacion-img > * {
