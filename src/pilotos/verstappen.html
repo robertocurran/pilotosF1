@@ -19,7 +19,7 @@
             content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="../styles.css" />
-        <script src="../car_color.js"></script>
+        <script defer type="module" src="../car_color.js"></script>
     </head>
     <body>
         <header>
@@ -31,6 +31,7 @@
                     </div>
                     <a href="../index.html"
                         ><img
+                            loading="lazy"
                             alt="Logo PilotosF1"
                             src="../img/logo.webp"
                             id="logo"
@@ -56,10 +57,21 @@
             <div class="container">
                 <div class="bio">
                     <div class="bio-cara">
-                        <img
-                            alt="Verstappen"
-                            src="../img/faces/verstappen.webp"
-                        />
+                        <picture>
+                            <source
+                                media="(max-resolution: 299dpi)"
+                                srcset="../img/faces/verstappen.jpg"
+                            />
+                            <source
+                                media="(min-resolution: 300dpi)"
+                                srcset="../img/faces/verstappen300.jpg"
+                            />
+                            <img
+                                loading="lazy"
+                                alt="Fernando Alonso"
+                                src="../img/faces/verstappen.jpg"
+                            />
+                        </picture>
                     </div>
                     <div class="bio-datos">
                         <ul>
@@ -143,12 +155,14 @@
                                 srcset="../img/wdc_verstappen.webp"
                             />
                             <img
+                                loading="lazy"
                                 alt="Max Verstappen levantando el trofeo de Abu Dhabi"
                                 src="../img/wdc_verstappen.webp"
                             />
                         </picture>
 
                         <img
+                            loading="lazy"
                             src="../img/stat-verstappen.webp"
                             srcset="
                                 ../img/stat-verstappen-mini.webp 360w,
@@ -182,6 +196,7 @@
                     2021-2022
                 </p>
                 <img
+                    loading="lazy"
                     src="../img/Gerald_G_Formula_One_Car.webp"
                     alt="Coche de F1"
                 />

@@ -19,7 +19,7 @@
             content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="../styles.css" />
-        <script src="../car_color.js"></script>
+        <script defer type="module" src="../car_color.js"></script>
     </head>
     <body>
         <header>
@@ -31,6 +31,7 @@
                     </div>
                     <a href="../index.html"
                         ><img
+                            loading="lazy"
                             alt="Logo PilotosF1"
                             src="../img/logo.webp"
                             id="logo"
@@ -56,7 +57,21 @@
             <div class="container">
                 <div class="bio">
                     <div class="bio-cara">
-                        <img alt="Ocon" src="../img/faces/ocon.webp" />
+                        <picture>
+                            <source
+                                media="(max-resolution: 299dpi)"
+                                srcset="../img/faces/ocon.jpg"
+                            />
+                            <source
+                                media="(min-resolution: 300dpi)"
+                                srcset="../img/faces/ocon300.jpg"
+                            />
+                            <img
+                                loading="lazy"
+                                alt="Fernando Alonso"
+                                src="../img/faces/ocon.jpg"
+                            />
+                        </picture>
                     </div>
                     <div class="bio-datos">
                         <ul>
@@ -110,10 +125,12 @@
                             en la Fórmula 1.
                         </p>
                         <img
+                            loading="lazy"
                             alt="Fotografía de un coche de Ocon de F1"
                             src="../img/detalle ocon 1.webp"
                         />
                         <img
+                            loading="lazy"
                             alt="Segunda fotografía de un coche de Ocon de F1"
                             src="../img/detalle ocon 2.webp"
                         />
@@ -141,6 +158,7 @@
                     2021-2022
                 </p>
                 <img
+                    loading="lazy"
                     src="../img/Gerald_G_Formula_One_Car.webp"
                     alt="Coche de F1"
                 />

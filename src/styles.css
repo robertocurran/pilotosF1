@@ -745,6 +745,7 @@ cite::after {
         transform: translateY(-50%);
     }
 }
+
 .bio-datos li {
     list-style: none;
     font-size: 1.5vw;

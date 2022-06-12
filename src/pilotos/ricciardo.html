@@ -19,7 +19,7 @@
             content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="../styles.css" />
-        <script src="../car_color.js"></script>
+        <script defer type="module" src="../car_color.js"></script>
     </head>
     <body>
         <header>
@@ -31,6 +31,7 @@
                     </div>
                     <a href="../index.html"
                         ><img
+                            loading="lazy"
                             alt="Logo PilotosF1"
                             src="../img/logo.webp"
                             id="logo"
@@ -56,10 +57,21 @@
             <div class="container">
                 <div class="bio">
                     <div class="bio-cara">
-                        <img
-                            alt="Ricciardo"
-                            src="../img/faces/ricciardo.webp"
-                        />
+                        <picture>
+                            <source
+                                media="(max-resolution: 299dpi)"
+                                srcset="../img/faces/ricciardo.jpg"
+                            />
+                            <source
+                                media="(min-resolution: 300dpi)"
+                                srcset="../img/faces/ricciardo300.jpg"
+                            />
+                            <img
+                                loading="lazy"
+                                alt="Fernando Alonso"
+                                src="../img/faces/ricciardo.jpg"
+                            />
+                        </picture>
                     </div>
                     <div class="bio-datos">
                         <ul>
@@ -127,10 +139,12 @@
                             Honores del Día de Australia 2022 .
                         </p>
                         <img
+                            loading="lazy"
                             alt="Fotografía de un coche de Ricciardo de F1"
                             src="../img/detalle ricciardo 1.webp"
                         />
                         <img
+                            loading="lazy"
                             alt="Segunda fotografía de un coche de Ricciardo de F1"
                             src="../img/detalle ricciardo 2.webp"
                         />
@@ -158,6 +172,7 @@
                     2021-2022
                 </p>
                 <img
+                    loading="lazy"
                     src="../img/Gerald_G_Formula_One_Car.webp"
                     alt="Coche de F1"
                 />
